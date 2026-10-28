@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>科研灵感图库 · 静态镜像</title>
+  <link rel="stylesheet" href="style.css?v=20261028b" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>科研灵感图库</h1>
+    <p class="subtitle">开放科研插图配色灵感库（bioRxiv 与高影响力 OA 期刊，定期更新）</p>
+  </header>
+
+  <main class="container">
+    <section class="stats-bar">
+      <div class="stat-item"><span class="stat-num" id="statTotal">–</span><span class="stat-label">插图</span></div>
+      <div class="stat-item"><span class="stat-num" id="statJournals">–</span><span class="stat-label">期刊</span></div>
+      <div class="stat-right">
+        <span class="stat-chip">只读镜像 · 喜欢保存在你的浏览器</span>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <nav class="filter-tabs" id="filterTabs">
+        <button type="button" class="tab active" data-filter="all">全部</button>
+        <button type="button" class="tab" data-filter="liked">♥ 喜欢</button>
+        <button type="button" class="tab" data-filter="top">🏆 排行榜</button>
+      </nav>
+      <div class="toolbar-right">
+        <select id="journalSelect" title="按期刊筛选">
+          <option value="">全部期刊</option>
+        </select>
+        <select id="sortSelect" title="排序">
+          <option value="recent">最近收录</option>
+          <option value="pubdate">发表日期</option>
+        </select>
+        <input type="search" id="searchInput" placeholder="搜索标题 / 题注…" />
+      </div>
+    </section>
+
+    <section class="grid" id="grid"></section>
+    <div class="empty" id="empty" hidden>暂无内容</div>
+    <div class="load-more-wrap">
+      <button type="button" id="loadMoreBtn" class="btn-primary" hidden>加载更多</button>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <p>图片来自 bioRxiv 与高影响力 OA 期刊（开放获取，CC-BY 类许可，详情页附原文链接）· 本站为静态只读镜像 · 配色提取复用 <a href="extractor/" target="_blank" rel="noopener">科研配图配色方案提取器</a></p>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js?v=20261028b"></script>
+</body>
+</html>
