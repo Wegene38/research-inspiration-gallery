@@ -409,6 +409,115 @@ input[type="search"] {
   opacity: 1;
 }
 
+/* —— 手机端（PWA/小屏）适配 —— */
+.app-footer {
+  padding-bottom: calc(24px + env(safe-area-inset-bottom));
+}
+
+@media (max-width: 640px) {
+  .app-header {
+    padding: 26px 16px 12px;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.88rem;
+    padding: 0 8px;
+  }
+
+  .container {
+    padding: 0 14px 40px;
+  }
+
+  .stats-bar {
+    gap: 14px;
+    padding: 10px 14px;
+  }
+
+  .stat-num {
+    font-size: 1.1rem;
+  }
+
+  .stat-label {
+    font-size: 0.74rem;
+  }
+
+  .stat-right {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .next-run {
+    font-size: 0.72rem;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-tabs {
+    justify-content: center;
+  }
+
+  .filter-tabs .tab {
+    flex: 1;
+    padding: 8px 6px;
+    font-size: 0.88rem;
+  }
+
+  .toolbar-right {
+    width: 100%;
+  }
+
+  .toolbar-right select,
+  .toolbar-right input[type="search"] {
+    flex: 1 1 130px;
+    min-width: 0;
+  }
+
+  input[type="search"] {
+    width: auto;
+  }
+
+  .icon-btn {
+    padding: 6px 10px;
+  }
+
+  .btn-secondary {
+    padding: 9px 18px;
+  }
+
+  .detail-topbar {
+    flex-wrap: wrap;
+    padding: 14px 16px 0;
+  }
+
+  .detail-actions {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .detail-card {
+    padding: 14px;
+  }
+
+  .modal-mask {
+    padding: 10px;
+  }
+
+  .modal {
+    padding: 14px;
+  }
+
+  .extractor-embed {
+    height: 78vh;
+  }
+}
+
 /* —— 详情页 —— */
 .detail-topbar {
   display: flex;

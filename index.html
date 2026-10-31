@@ -2,9 +2,16 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="灵感图库" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="icons/icon-192.png" />
   <title>科研灵感图库 · 静态镜像</title>
-  <link rel="stylesheet" href="style.css?v=20261028b" />
+  <link rel="stylesheet" href="style.css?v=20261031a" />
 </head>
 <body>
   <header class="app-header">
@@ -52,6 +59,13 @@
 
   <div class="toast" id="toast"></div>
 
-  <script src="app.js?v=20261028b"></script>
+  <script src="app.js?v=20261031a"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () =>
+        navigator.serviceWorker.register("sw.js").catch(() => {})
+      );
+    }
+  </script>
 </body>
 </html>
